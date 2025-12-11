@@ -1,97 +1,85 @@
-# Coffee Sales Analysis — Exploratory Data Analysis (EDA)
+# Coffee Sales Analysis: Exploratory Data Analysis (EDA)
 
-This project analyzes sales data from a coffee shop, with the goal of understanding customer behavior, identifying patterns, and extracting insights that support data-driven decisions in marketing, pricing, and product strategy.
+This project presents an exploratory data analysis of coffee shop sales over approximately one year, using Python (Pandas, Matplotlib, and Seaborn). The goal is to understand consumption patterns, product performance, and temporal seasonality, generating practical insights for business decisions.
 
-It is one of my first independent Data Science projects, developed to practice exploratory data analysis, visualization, and analytical storytelling using Python.
+---
+
+## About the Dataset
+
+The dataset used is publicly available on Kaggle:  
+**Coffee Sales – Kaggle Dataset**  
+https://www.kaggle.com/datasets/ihelon/coffee-sales
+
+It contains 3,636 sales records from March/2024 to March/2025, with the following main columns:
+
+- `date` – date of the sale  
+- `datetime` – timestamp of the sale  
+- `cash_type` – payment method  
+- `money` – transaction value  
+- `coffee_name` – type of coffee sold  
+
+The structure allows both product-level and temporal analyses.
 
 ---
 
 ## Objectives
 
-The analysis focuses on answering questions such as:
+This analysis aims to answer questions such as:
 
-- Which coffee products generate the highest revenue and sales volume?
-- How do sales vary over time (daily, weekly, monthly)?
-- Are there identifiable seasonal or recurring patterns?
-- How does the average price differ by product?
-- Which days of the week show stronger or weaker performance?
-- What strategic opportunities can be derived from these trends?
-
----
-
-## Dataset
-
-The dataset contains coffee shop sales from March 2024 to March 2025.  
-Main columns:
-
-- `date` – date of sale  
-- `datetime` – time of sale  
-- `cash_type` – method of payment  
-- `money` – value of the transaction  
-- `coffee_name` – type of coffee sold  
-
-This structure supports both product-level and time-based analysis.
+- Which products have the highest sales volume and revenue?  
+- How do sales vary over time (daily, weekly, monthly)?  
+- Are there any seasonal or recurring patterns?  
+- How does the average ticket price differ between coffee types?  
+- Which days of the week perform best or worst?  
+- What insights can support strategic decision-making?  
 
 ---
 
-## Data Preparation
+## Key Findings
 
-Main preprocessing steps:
+### Product Analysis
+- The products with the highest sales volume were:  
+  - Americano with Milk (824)  
+  - Latte (782)  
+  - Americano (578)  
 
-1. Conversion of date and datetime columns.  
-2. Checking for missing values.  
-3. Creation of additional fields:  
-   - day of the week  
-   - month  
+- In terms of total revenue, the top items were:  
+  - Latte (R$ 27,866.30)  
+  - Americano with Milk (R$ 25,269.12)  
+  - Cappuccino (R$ 18,034.14)  
 
----
+- For average ticket price, the highlights were:  
+  - Hot Chocolate (R$ 36.07)  
+  - Cappuccino (R$ 36.00)  
+  - Cocoa (R$ 35.71)  
 
-## Analyses Performed
+### Temporal Analysis
+- The highest monthly revenue was recorded in:  
+  - October 2024 (R$ 13,891.16)  
+  - February 2025 (R$ 13,215.48)  
 
-### 1. Product Analysis
-- Sales volume by product  
-- Revenue by product  
-- Average price per product  
-- Comparison between volume and average ticket  
-
-These steps help identify:
-- best-selling items  
-- products that drive revenue  
-- higher-ticket drinks that may deserve greater visibility  
-
----
-
-### 2. Time-Based Analysis
-Analysis by:
-- day  
-- weekday  
-- month  
-
-Key findings include:
-- growth toward the end of the period  
-- a significant sales peak in October 2024  
-- higher activity on weekdays  
-- lower demand on Sundays  
+- The lowest month was January 2025 (R$ 6,398.86).  
+- Among weekdays, Tuesday had the highest total revenue.
 
 ---
 
 ## Business Insights
 
-Some potential strategic actions based on the data:
+Based on the analysis, some potential actions include:
 
-- Plan marketing campaigns around months with historically higher demand.  
-- Promote Espresso as an accessible option to attract new customers.  
-- Explore discounts or combos on high-performance weekdays such as Tuesday.  
-- Create Sunday campaigns to increase traffic on the lowest-performing day.  
-- Automate monthly sales dashboards for faster strategic adjustments.
+- Focusing marketing campaigns on historically stronger months.  
+- Using Espresso as an entry-level item to attract new customers.  
+- Creating discounts or combo deals on traditionally strong days, such as Tuesdays.  
+- Planning specific actions to increase activity on Sundays.  
+- Automating monthly reports for continuous performance monitoring.  
 
 ---
 
-## Future Improvements
+## Next Steps
 
-- Add cost data to calculate product margins.  
-- Use payment data to explore basic customer segmentation.  
-- Build a simple forecasting model for monthly sales.  
+- Incorporate cost data to analyze product margins.  
+- Explore customer segmentation using payment information.  
+- Develop a simple sales forecasting model.  
 - Automate monthly reports with Python.
 
 ---
@@ -103,4 +91,4 @@ Some potential strategic actions based on the data:
 - NumPy  
 - Matplotlib  
 - Seaborn  
-- Google Colab  
+- Google Colab
