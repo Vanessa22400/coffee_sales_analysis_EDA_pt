@@ -1,8 +1,24 @@
-# Análise de Vendas de Café — Exploratory Data Analysis (EDA)
+# Análise de Vendas de Café: Exploratory Data Analysis (EDA)
 
-Este projeto apresenta uma análise exploratória de vendas de uma cafeteria, com o objetivo de compreender o comportamento de consumo, identificar padrões relevantes e extrair insights que possam apoiar decisões estratégicas nas áreas de marketing, precificação e gestão de produtos.
+Este projeto apresenta uma análise exploratória dos dados de vendas de uma cafeteria ao longo de aproximadamente um ano, utilizando Python (Pandas, Matplotlib e Seaborn). O objetivo é entender padrões de consumo, desempenho de produtos e sazonalidade temporal, gerando insights práticos para negócios.
 
-Este foi um dos meus primeiros projetos autorais em Ciência de Dados, desenvolvido para praticar análise exploratória, visualização e estruturação de um fluxo analítico completo em Python.
+---
+
+## Sobre o Dataset
+
+O conjunto de dados utilizado é público e está disponível no Kaggle:
+Coffee Sales – Kaggle Dataset
+https://www.kaggle.com/datasets/ihelon/coffee-sales
+
+Ele contém 3.636 registros de vendas entre março/2024 e março/2025 e as principais colunas são:
+
+- `date` – data da venda  
+- `datetime` – horário da venda  
+- `cash_type` – forma de pagamento  
+- `money` – valor da transação  
+- `coffee_name` – tipo de café vendido  
+
+A estrutura permite análises tanto por produto quanto temporais.
 
 ---
 
@@ -15,63 +31,32 @@ A análise busca responder a questões como:
 - Há padrões de sazonalidade ou recorrência?
 - Como o preço médio se comporta entre diferentes tipos de café?
 - Existem dias da semana com melhor ou pior desempenho?
-- Que oportunidades estratégicas podem ser extraídas desses padrões?
+- Quais insights podem apoiar decisões estratégicas?
 
 ---
 
-## Sobre o Dataset
+## Principais Resultados
 
-O conjunto de dados contém registros de vendas entre março/2024 e março/2025.  
-Principais colunas:
+### Análise de Produtos
+- Os produtos com maior volume de vendas foram:
+  - *Americano with Milk* (824)
+  - *Latte* (782)
+  - *Americano* (578)
+- Em receita total, os principais itens foram:
+  - *Latte* (R$ 27.866,30)
+  - *Americano with Milk* (R$ 25.269,12)
+  - *Cappuccino* (R$ 18.034,14)
+- Em ticket médio, destacaram-se:
+  - *Hot Chocolate* (R$ 36,07)
+  - *Cappuccino* (R$ 36,00)
+  - *Cocoa* (R$ 35,71)
 
-- `date` – data da venda  
-- `datetime` – horário da venda  
-- `cash_type` – forma de pagamento  
-- `money` – valor da transação  
-- `coffee_name` – tipo de café vendido  
-
-A estrutura permite análises tanto por produto quanto temporais.
-
----
-
-## Preparação dos Dados
-
-As principais etapas de preparação foram:
-
-1. Conversão das colunas de datas.  
-2. Verificação e tratamento de valores ausentes.  
-3. Criação de variáveis auxiliares:  
-   - dia da semana  
-   - mês  
-
----
-
-## Análises Realizadas
-
-### 1. Análise por Produto
-- Volume de vendas por tipo de café  
-- Faturamento por produto  
-- Preço médio  
-- Comparação entre volume e ticket médio  
-
-Essas análises permitem identificar:
-- produtos mais populares  
-- itens que mais contribuem para o faturamento  
-- bebidas de maior ticket médio que podem receber mais destaque  
-
----
-
-### 2. Análise Temporal
-Foram avaliadas variações por:
-- dia  
-- dia da semana  
-- mês  
-
-Algumas observações relevantes:
-- tendência de crescimento nos meses finais  
-- pico de vendas em outubro/2024  
-- maior movimento em dias úteis  
-- menor demanda aos domingos  
+### Análise Temporal
+- Os maiores faturamentos mensais foram observados em:
+  - **Outubro de 2024** (R$ 13.891,16)
+  - **Fevereiro de 2025** (R$ 13.215,48)
+- O menor mês foi **janeiro de 2025** (R$ 6.398,86)
+- Entre os dias da semana, **terça-feira** teve maior receita total.
 
 ---
 
