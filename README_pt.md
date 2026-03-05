@@ -1,91 +1,138 @@
-# Análise de Vendas de Café: Exploratory Data Analysis (EDA)
+# Análise de Vendas de Cafeteria: Estratégia de Receita e Padrões de Demanda (Mar/2024 – Mar/2025)
 
-Este projeto apresenta uma análise exploratória dos dados de vendas de uma cafeteria ao longo de aproximadamente um ano, utilizando Python (Pandas, Matplotlib e Seaborn). O objetivo é entender padrões de consumo, desempenho de produtos e sazonalidade temporal, gerando insights práticos para negócios.
+Este projeto apresenta uma análise exploratória de dados de vendas de uma cafeteria ao longo de aproximadamente um ano.
+
+O objetivo é entender **quais produtos geram mais receita, como a demanda varia ao longo do tempo e quais oportunidades estratégicas podem melhorar o desempenho do negócio**.
 
 ---
 
-## Sobre o Dataset
+## Dataset
 
-O conjunto de dados utilizado é público e está disponível no Kaggle:
-Coffee Sales – Kaggle Dataset
+Dataset público disponível no Kaggle:  
 https://www.kaggle.com/datasets/ihelon/coffee-sales
 
-Ele contém 3.636 registros de vendas entre março/2024 e março/2025 e as principais colunas são:
+O conjunto de dados contém **3.636 transações entre março de 2024 e março de 2025**, com as seguintes colunas principais:
 
 - `date` – data da venda  
-- `datetime` – horário da venda  
+- `datetime` – data e hora da venda  
 - `cash_type` – forma de pagamento  
 - `money` – valor da transação  
 - `coffee_name` – tipo de café vendido  
-
-A estrutura permite análises tanto por produto quanto temporais.
 
 ---
 
 ## Objetivos
 
-A análise busca responder a questões como:
+A análise busca responder perguntas como:
 
-- Quais produtos têm maior volume de vendas e maior faturamento?
-- Como as vendas variam ao longo do tempo (diário, semanal, mensal)?
-- Há padrões de sazonalidade ou recorrência?
-- Como o preço médio se comporta entre diferentes tipos de café?
-- Existem dias da semana com melhor ou pior desempenho?
-- Quais insights podem apoiar decisões estratégicas?
+- Quais produtos geram mais faturamento?
+- Quais cafés são mais vendidos?
+- Existem padrões de demanda ao longo do tempo?
+- Quais períodos são mais fortes ou mais fracos?
+- Que ações poderiam melhorar o desempenho do negócio?
 
 ---
 
-## Principais Resultados
+## Preparação dos Dados
 
-### Análise de Produtos
-- Os produtos com maior volume de vendas foram:
-  - *Americano with Milk* (824)
-  - *Latte* (782)
-  - *Americano* (578)
-- Em receita total, os principais itens foram:
-  - *Latte* (R$ 27.866,30)
-  - *Americano with Milk* (R$ 25.269,12)
-  - *Cappuccino* (R$ 18.034,14)
-- Em ticket médio, destacaram-se:
-  - *Hot Chocolate* (R$ 36,07)
-  - *Cappuccino* (R$ 36,00)
-  - *Cocoa* (R$ 35,71)
+As principais etapas de preparação incluíram:
 
-### Análise Temporal
-- Os maiores faturamentos mensais foram observados em:
-  - **Outubro de 2024** (R$ 13.891,16)
-  - **Fevereiro de 2025** (R$ 13.215,48)
-- O menor mês foi **janeiro de 2025** (R$ 6.398,86)
-- Entre os dias da semana, **terça-feira** teve maior receita total.
+- Conversão das colunas de data para formato datetime
+- Criação de variáveis temporais (dia da semana, hora e mês)
+- Verificação de valores ausentes
+
+Um insight interessante é que **97,5% das transações foram realizadas com cartão**, indicando um perfil de cliente predominantemente digital.
+
+---
+
+## Principais Visualizações
+
+### Vendas por Produto
+
+![Vendas por tipo de café](img/plot1_Vendas%20por%20tipo%20de%20café.png)
+
+Os cafés mais vendidos foram:
+
+- Americano with Milk (824)
+- Latte (782)
+- Americano (578)
+
+Esses produtos representam a base de demanda da cafeteria.
+
+---
+
+### Faturamento por Produto
+
+![Faturamento por tipo de café](img/plot2_Faturamento%20por%20Tipo%20de%20Café.png)
+
+Ao analisar o faturamento, observamos que **nem sempre o produto mais vendido é o que mais gera receita**.
+
+Os principais produtos em faturamento foram:
+
+- Latte — 27.866
+- Americano with Milk — 25.269
+- Cappuccino — 18.034
+
+---
+
+### Evolução das Vendas Diárias
+
+![Vendas diárias](img/plot4_vendas%20diarias.png)
+
+As vendas diárias apresentam bastante variação ao longo do período, com alguns picos bem marcados.
+
+Também é possível perceber uma leve tendência de crescimento no início de 2025.
+
+---
+
+### Faturamento Mensal
+
+![Faturamento mensal](img/plot9_faturamento%20mensal.png)
+
+A análise mensal ajuda a identificar padrões de sazonalidade.
+
+Por exemplo:
+
+- **Maio de 2024** apresentou o maior volume de vendas.
+- **Abril de 2024** teve o menor movimento.
+
+Essas informações podem ajudar no planejamento de campanhas e promoções.
 
 ---
 
 ## Insights de Negócio
 
-Com base na análise, algumas ações potenciais incluem:
+A partir da análise, alguns pontos importantes aparecem:
 
-- Concentrar campanhas de marketing em meses historicamente mais fortes.  
-- Utilizar o Espresso como item de entrada para atrair novos clientes.  
-- Criar descontos ou combos em dias tradicionalmente mais fortes, como terça-feira.  
-- Planejar ações específicas para aumentar o movimento aos domingos.  
-- Automatizar relatórios mensais para acompanhamento contínuo do desempenho.  
+- Latte e Americano with Milk são os principais motores de receita.
+- Espresso funciona como um produto de entrada de menor preço.
+- Há variações claras de demanda ao longo do ano.
+- Alguns períodos podem se beneficiar de campanhas específicas para aumentar o fluxo de clientes.
 
 ---
 
 ## Próximos Passos
 
-- Incorporar dados de custo para análise de margem por produto.  
-- Explorar segmentação de clientes utilizando dados de pagamento.  
-- Desenvolver um modelo simples de previsão de vendas.  
-- Automatizar relatórios mensais com Python.
+Possíveis evoluções para o projeto:
+
+- Incluir dados de custo para analisar margem de lucro
+- Criar um modelo simples de previsão de demanda
+- Explorar comportamento de clientes
+- Automatizar relatórios mensais
 
 ---
 
 ## Ferramentas Utilizadas
 
-- Python  
-- Pandas  
-- NumPy  
-- Matplotlib  
-- Seaborn  
-- Google Colab  
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Google Colab
+
+---
+
+## Contexto
+
+Este foi o primeiro projeto completo de análise de dados que desenvolvi de forma independente. Escolhi esse tema pelo meu interesse no mercado de cafeterias e também pela minha experiência anterior em vendas, o que me levou a focar a análise em **insights de negócio e estratégia de receita**.
