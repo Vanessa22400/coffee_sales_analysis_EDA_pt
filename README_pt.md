@@ -90,7 +90,7 @@ Tradução dos resultados analíticos em recomendações de negócio.
 
 ### Vendas por Produto
 
-![Vendas por tipo de café](Images/plot1_Vendas%20por%20tipo%20de%20café.png)
+![Vendas por tipo de café](img/plot1_Vendas%20por%20tipo%20de%20café.png)
 
 **Figura:** volume de vendas por tipo de café.
 
@@ -104,7 +104,7 @@ Produtos mais vendidos:
 
 ### Faturamento por Produto
 
-![Faturamento por tipo de café](Images/plot2_Faturamento%20por%20Tipo%20de%20Café.png)
+![Faturamento por tipo de café](img/plot2_Faturamento%20por%20Tipo%20de%20Café.png)
 
 **Figura:** faturamento total por produto.
 
@@ -118,7 +118,7 @@ Produtos que mais geram receita:
 
 ### Padrões Mensais de Receita
 
-![Faturamento mensal](Images/plot9_faturamento%20mensal.png)
+![Faturamento mensal](img/plot9_faturamento%20mensal.png)
 
 **Figura:** evolução mensal do faturamento.
 
