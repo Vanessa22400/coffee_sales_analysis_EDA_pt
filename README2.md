@@ -49,7 +49,7 @@ An interesting operational insight is that **97.5% of transactions are card paym
 
 ### Product Demand
 
-![Sales by coffee type](Images/plot1_Vendas%20por%20tipo%20de%20café.png)
+![Sales by coffee type](img/plot1_Vendas%20por%20tipo%20de%20café.png)
 
 The most frequently sold products are:
 
@@ -63,7 +63,7 @@ These represent the core demand of the coffee shop.
 
 ### Revenue Drivers
 
-![Revenue by coffee type](Images/plot2_Faturamento%20por%20Tipo%20de%20Café.png)
+![Revenue by coffee type](img/plot2_Faturamento%20por%20Tipo%20de%20Café.png)
 
 Revenue analysis reveals that **volume and revenue are not always aligned**.
 
@@ -79,7 +79,7 @@ Products with slightly lower volume can still contribute strongly to total reven
 
 ### Daily Sales Behavior
 
-![Daily sales](Images/plot4_vendas%20diarias.png)
+![Daily sales](img/plot4_vendas%20diarias.png)
 
 Daily sales fluctuate significantly across the year, with visible peaks that may reflect campaigns, events, or seasonal demand.
 
@@ -89,7 +89,7 @@ Towards early 2025 there is a noticeable increase in activity.
 
 ### Monthly Revenue Trends
 
-![Monthly revenue](Images/plot9_faturamento%20mensal.png)
+![Monthly revenue](img/plot9_faturamento%20mensal.png)
 
 Monthly aggregation helps reveal seasonality patterns.
 
