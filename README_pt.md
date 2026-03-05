@@ -1,138 +1,181 @@
-# Análise de Vendas de Cafeteria: Estratégia de Receita e Padrões de Demanda (Mar/2024 – Mar/2025)
+# Análise de Vendas de Cafeteria: Estratégia de Receita e Padrões de Demanda
+*Análise exploratória de vendas para entender desempenho de produtos, padrões de demanda e oportunidades de melhorar a receita.*
 
-Este projeto apresenta uma análise exploratória de dados de vendas de uma cafeteria ao longo de aproximadamente um ano.
+**Dataset:** 3.636 transações (março de 2024 – março de 2025)  
+**Técnicas:** análise exploratória de dados, análise temporal e análise de faturamento  
+**Resultado principal:** identificação dos principais produtos geradores de receita e padrões de demanda ao longo do ano
 
-O objetivo é entender **quais produtos geram mais receita, como a demanda varia ao longo do tempo e quais oportunidades estratégicas podem melhorar o desempenho do negócio**.
+---
+
+## Contexto de Negócio
+
+Cafeterias operam em um ambiente dinâmico, onde a demanda varia ao longo dos dias e das estações do ano. Pequenas melhorias no posicionamento de produtos, promoções e planejamento operacional podem ter impacto relevante na receita.
+
+Entender **quais produtos geram mais faturamento**, **quando a demanda aumenta ou diminui**, e **onde existem oportunidades operacionais** permite tomar decisões melhores sobre preços, marketing e planejamento.
+
+Mesmo utilizando um dataset público, o projeto foi estruturado como um cenário real de análise para apoiar decisões de negócio.
 
 ---
 
 ## Dataset
 
-Dataset público disponível no Kaggle:  
+Fonte:  
 https://www.kaggle.com/datasets/ihelon/coffee-sales
 
-O conjunto de dados contém **3.636 transações entre março de 2024 e março de 2025**, com as seguintes colunas principais:
+Características do dataset:
 
-- `date` – data da venda  
-- `datetime` – data e hora da venda  
-- `cash_type` – forma de pagamento  
-- `money` – valor da transação  
-- `coffee_name` – tipo de café vendido  
+• **3.636 transações de vendas**  
+• Período: **março de 2024 a março de 2025**  
+• Dados no nível de transação  
+
+Principais variáveis:
+
+• `date` — data da venda  
+• `datetime` — data e hora da transação  
+• `cash_type` — forma de pagamento  
+• `money` — valor da venda  
+• `coffee_name` — produto vendido  
+
+Um ponto interessante é que **97,5% das transações foram feitas com cartão**, indicando um perfil de cliente majoritariamente digital.
+
+---
+
+## Problema de Negócio
+
+Como os dados de vendas podem ser analisados para identificar **produtos mais relevantes, padrões de demanda e oportunidades de melhoria de receita** em uma cafeteria?
 
 ---
 
 ## Objetivos
 
-A análise busca responder perguntas como:
-
-- Quais produtos geram mais faturamento?
-- Quais cafés são mais vendidos?
-- Existem padrões de demanda ao longo do tempo?
-- Quais períodos são mais fortes ou mais fracos?
-- Que ações poderiam melhorar o desempenho do negócio?
+- Identificar os produtos que geram **maior volume de vendas e maior faturamento**
+- Realizar uma **análise exploratória estruturada**
+- Analisar **padrões temporais** de demanda
+- Comparar produtos de **alto volume versus alto faturamento**
+- Traduzir resultados analíticos em **insights de negócio**
 
 ---
 
-## Preparação dos Dados
+## Metodologia
 
-As principais etapas de preparação incluíram:
+1. **Limpeza e preparação dos dados**  
+Conversão de datas, verificação de valores ausentes e criação de variáveis temporais.
 
-- Conversão das colunas de data para formato datetime
-- Criação de variáveis temporais (dia da semana, hora e mês)
-- Verificação de valores ausentes
+2. **Análise exploratória**  
+Investigação de padrões de vendas e faturamento.
 
-Um insight interessante é que **97,5% das transações foram realizadas com cartão**, indicando um perfil de cliente predominantemente digital.
+3. **Análise temporal**  
+Estudo de padrões diários e mensais para identificar sazonalidade.
 
----
+4. **Análise de faturamento**  
+Comparação entre popularidade de produtos e geração de receita.
 
-## Principais Visualizações
-
-### Vendas por Produto
-
-![Vendas por tipo de café](img/plot1_Vendas%20por%20tipo%20de%20café.png)
-
-Os cafés mais vendidos foram:
-
-- Americano with Milk (824)
-- Latte (782)
-- Americano (578)
-
-Esses produtos representam a base de demanda da cafeteria.
-
----
-
-### Faturamento por Produto
-
-![Faturamento por tipo de café](img/plot2_Faturamento%20por%20Tipo%20de%20Café.png)
-
-Ao analisar o faturamento, observamos que **nem sempre o produto mais vendido é o que mais gera receita**.
-
-Os principais produtos em faturamento foram:
-
-- Latte — 27.866
-- Americano with Milk — 25.269
-- Cappuccino — 18.034
-
----
-
-### Evolução das Vendas Diárias
-
-![Vendas diárias](img/plot4_vendas%20diarias.png)
-
-As vendas diárias apresentam bastante variação ao longo do período, com alguns picos bem marcados.
-
-Também é possível perceber uma leve tendência de crescimento no início de 2025.
-
----
-
-### Faturamento Mensal
-
-![Faturamento mensal](img/plot9_faturamento%20mensal.png)
-
-A análise mensal ajuda a identificar padrões de sazonalidade.
-
-Por exemplo:
-
-- **Maio de 2024** apresentou o maior volume de vendas.
-- **Abril de 2024** teve o menor movimento.
-
-Essas informações podem ajudar no planejamento de campanhas e promoções.
-
----
-
-## Insights de Negócio
-
-A partir da análise, alguns pontos importantes aparecem:
-
-- Latte e Americano with Milk são os principais motores de receita.
-- Espresso funciona como um produto de entrada de menor preço.
-- Há variações claras de demanda ao longo do ano.
-- Alguns períodos podem se beneficiar de campanhas específicas para aumentar o fluxo de clientes.
-
----
-
-## Próximos Passos
-
-Possíveis evoluções para o projeto:
-
-- Incluir dados de custo para analisar margem de lucro
-- Criar um modelo simples de previsão de demanda
-- Explorar comportamento de clientes
-- Automatizar relatórios mensais
+5. **Geração de insights**  
+Tradução dos resultados analíticos em recomendações de negócio.
 
 ---
 
 ## Ferramentas Utilizadas
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Google Colab
+• Python  
+• Pandas  
+• NumPy  
+• Matplotlib  
+• Seaborn  
+• Google Colab  
 
 ---
 
-## Contexto
+## Principais Resultados da Análise
 
-Este foi o primeiro projeto completo de análise de dados que desenvolvi de forma independente. Escolhi esse tema pelo meu interesse no mercado de cafeterias e também pela minha experiência anterior em vendas, o que me levou a focar a análise em **insights de negócio e estratégia de receita**.
+### Vendas por Produto
+
+![Vendas por tipo de café](Images/plot1_Vendas%20por%20tipo%20de%20café.png)
+
+**Figura:** volume de vendas por tipo de café.
+
+Produtos mais vendidos:
+
+• Americano with Milk  
+• Latte  
+• Americano  
+
+---
+
+### Faturamento por Produto
+
+![Faturamento por tipo de café](Images/plot2_Faturamento%20por%20Tipo%20de%20Café.png)
+
+**Figura:** faturamento total por produto.
+
+Produtos que mais geram receita:
+
+• Latte  
+• Americano with Milk  
+• Cappuccino  
+
+---
+
+### Padrões Mensais de Receita
+
+![Faturamento mensal](Images/plot9_faturamento%20mensal.png)
+
+**Figura:** evolução mensal do faturamento.
+
+A análise mensal mostra variações ao longo do ano, indicando períodos de maior e menor demanda.
+
+---
+
+## Principais Insights
+
+• Americano with Milk e Latte representam a base da demanda recorrente.  
+• Latte aparece como o principal gerador de receita.  
+• Espresso funciona como produto de entrada com menor preço.  
+• Existem variações de demanda ao longo do ano que podem orientar promoções.
+
+---
+
+## Impacto de Negócio
+
+Os resultados podem apoiar decisões como:
+
+• Estratégia de posicionamento de produtos  
+• Planejamento de estoque e equipe  
+• Criação de campanhas sazonais  
+• Monitoramento de desempenho de vendas
+
+---
+
+## Próximos Passos
+
+Possíveis evoluções do projeto:
+
+• Incluir dados de custo para análise de margem  
+• Criar um modelo de previsão de vendas  
+• Automatizar relatórios de desempenho  
+• Construir um dashboard de monitoramento
+
+---
+
+## Estrutura do Repositório
+```
+.
+├── data
+├── notebooks
+├── images
+├── requirements.txt
+└── README.md
+```
+
+
+---
+
+## Conclusão
+
+Este projeto mostra como uma análise exploratória estruturada pode transformar dados de vendas em insights úteis para decisões de negócio.
+
+Além da análise técnica, o foco do projeto foi gerar **insights claros e aplicáveis para melhorar estratégia de receita e planejamento operacional.**
+
+
+
+
